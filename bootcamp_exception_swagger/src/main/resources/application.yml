@@ -1,0 +1,33 @@
+server:
+     port : 8090
+management:
+      endpoints:
+             web:
+               exposure:
+                  include : "*"
+course:
+     message : Hello
+     
+
+             
+spring:
+ profiles:
+  active: prod
+ h2:
+  console.enabled: true
+ datasource:
+  url: jdbc:h2:mem:mydb
+  username: sa
+  password:
+  driverClassName: org.h2.Driver
+  
+ jpa:
+  spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+  spring.jpa.defer-datasource-initialization: true
+  spring.jpa.hibernate.ddl-auto: create
+  
+  
+  
+
+
+  
